@@ -1,2 +1,160 @@
-<h1>my portfolio</h1>
-<h2>coming with a big suprise</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- Use Tailwind CSS for responsive styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use the Inter font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 p-4 bg-[#161b22] bg-opacity-90 backdrop-filter backdrop-blur-lg shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo/Name -->
+            <a href="#" class="text-xl font-bold text-white transition-colors duration-300 hover:text-blue-400">
+                Vishnu yadav
+            </a>
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="text-white hover:text-blue-400 transition-colors duration-300">Home</a>
+                <a href="#about" class="text-white hover:text-blue-400 transition-colors duration-300">About</a>
+                <a href="#projects" class="text-white hover:text-blue-400 transition-colors duration-300">Projects</a>
+                <a href="#contact" class="text-white hover:text-blue-400 transition-colors duration-300">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="md:hidden flex flex-col items-center mt-4 space-y-4 hidden">
+            <a href="#home" class="text-white hover:text-blue-400 transition-colors duration-300">Home</a>
+            <a href="#about" class="text-white hover:text-blue-400 transition-colors duration-300">About</a>
+            <a href="#projects" class="text-white hover:text-blue-400 transition-colors duration-300">Projects</a>
+            <a href="#contact" class="text-white hover:text-blue-400 transition-colors duration-300">Contact</a>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 py-8">
+
+        <!-- Home/Hero Section -->
+        <section id="home" class="flex flex-col md:flex-row items-center justify-center min-h-screen py-16">
+            <div class="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">Hello, I'm Vishnu Yadav</h1>
+                <p class="mt-4 text-lg sm:text-xl text-gray-400">A passionate web developer specializing in building modern and responsive web applications.</p>
+                <a href="#projects" class="mt-8 inline-block px-8 py-3 bg-blue-600 text-white font-bold rounded-full shadow-lg transition transform hover:scale-105 hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50">View My Work</a>
+            </div>
+            <div class="md:w-1/2 flex justify-center md:justify-end">
+                <!-- Placeholder Profile Picture -->
+                <img src="https://placehold.co/400x400/1f2937/d1d5db?text=Profile" alt="Profile Picture" class="rounded-full shadow-xl transition-transform duration-500 hover:scale-105">
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="min-h-screen py-16 flex items-center justify-center">
+            <div class="bg-[#161b22] p-8 md:p-12 rounded-2xl shadow-xl max-w-4xl w-full">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white text-center mb-8">About Me</h2>
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <img src="https://placehold.co/400x300/1f2937/d1d5db?text=About+Image" alt="About Me" class="rounded-lg shadow-md transition-transform duration-500 hover:scale-105">
+                    <div class="text-lg text-gray-400">
+                        <p class="mb-4">
+                            I am a dedicated full-stack develope
+                        </p>
+                        <p>
+                            I'm passionate about clean code, continuous learning, and creating impactful solutions. When I'm not coding, you can find me hiking, reading, or exploring new technologies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="min-h-screen py-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white text-center mb-12">My Projects</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="bg-[#161b22] rounded-2xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <img src="https://placehold.co/600x400/1f2937/d1d5db?text=Project+1" alt="Project 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white">Project Title 1</h3>
+                        <p class="mt-2 text-gray-400">A brief description of my first project, highlighting the technologies used and the key features.</p>
+                        <a href="#" class="mt-4 inline-block text-blue-400 hover:text-blue-500 font-semibold transition-colors duration-300">View Project &rarr;</a>
+                    </div>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="bg-[#161b22] rounded-2xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <img src="https://placehold.co/600x400/1f2937/d1d5db?text=Project+2" alt="Project 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white">Project Title 2</h3>
+                        <p class="mt-2 text-gray-400">A brief description of my second project, highlighting the technologies used and the key features.</p>
+                        <a href="#" class="mt-4 inline-block text-blue-400 hover:text-blue-500 font-semibold transition-colors duration-300">View Project &rarr;</a>
+                    </div>
+                </div>
+                <!-- Project Card 3 -->
+                <div class="bg-[#161b22] rounded-2xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <img src="https://placehold.co/600x400/1f2937/d1d5db?text=Project+3" alt="Project 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white">Project Title 3</h3>
+                        <p class="mt-2 text-gray-400">A brief description of my third project, highlighting the technologies used and the key features.</p>
+                        <a href="#" class="mt-4 inline-block text-blue-400 hover:text-blue-500 font-semibold transition-colors duration-300">View Project &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="min-h-screen py-16 flex items-center justify-center">
+            <div class="bg-[#161b22] p-8 md:p-12 rounded-2xl shadow-xl max-w-2xl w-full">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white text-center mb-8">Get in Touch</h2>
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-300">Name</label>
+                        <input type="text" id="name" name="name" class="mt-1 block w-full px-4 py-2 rounded-lg bg-[#24292e] text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-300">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-300">Email</label>
+                        <input type="email" id="email" name="email" class="mt-1 block w-full px-4 py-2 rounded-lg bg-[#24292e] text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-300">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-300">Message</label>
+                        <textarea id="message" name="message" rows="4" class="mt-1 block w-full px-4 py-2 rounded-lg bg-[#24292e] text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-300"></textarea>
+                    </div>
+                    <button type="submit" class="w-full px-6 py-3 bg-blue-600 text-white font-bold rounded-lg shadow-lg transition transform hover:scale-105 hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#161b22] p-4 text-center text-gray-400">
+        <p>&copy; 2024 Vishnu Yadav. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for mobile menu toggle -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
